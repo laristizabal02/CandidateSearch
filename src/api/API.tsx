@@ -47,6 +47,7 @@ export { searchGithub, searchGithubUser };
 
 import { Candidate } from '../interfaces/Candidate.interface'
 
+
 interface ApiResponse {
   id: number;
   avatar_url: string; // Image URL from API
