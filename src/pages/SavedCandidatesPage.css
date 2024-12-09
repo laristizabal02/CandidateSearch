@@ -1,0 +1,36 @@
+.saved-candidates-page {
+    padding: 20px;
+  }
+  
+  .candidates-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .candidates-table th,
+  .candidates-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .candidate-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .reject-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .reject-button:hover {
+    background-color: #d32f2f;
+  }
+  
