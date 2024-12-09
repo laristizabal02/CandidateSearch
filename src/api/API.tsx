@@ -67,9 +67,9 @@ interface DetailedApiResponse {
 const searchGithub = async (): Promise<Candidate[]> => {
   try {
     const start = Math.floor(Math.random() * 100000000) + 1;
-    console.log('Request URL:', `https://api.github.com/users?since=${start}`);
-    console.log('Authorization Header:', `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`);
-    console.log('GitHub Token:', import.meta.env.VITE_GITHUB_TOKEN);
+   // console.log('Request URL:', `https://api.github.com/users?since=${start}`);
+   // console.log('Authorization Header:', `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`);
+   
 
     const response = await fetch(`https://api.github.com/users?since=${start}`, {
       headers: {
@@ -77,13 +77,13 @@ const searchGithub = async (): Promise<Candidate[]> => {
       },
     });
 
-    console.log('Response Status:', response.status);
+    //console.log('Response Status:', response.status);
     if (!response.ok) {
       throw new Error('Invalid API response, check the network tab.');
     }
 
     const users: ApiResponse[] = await response.json();
-    console.log('Raw Data from GitHub API:', users);
+    //console.log('Raw Data from GitHub API:', users);
 
     // Fetch detailed user data for each user
     const detailedUsers = await Promise.all(
@@ -103,10 +103,10 @@ const searchGithub = async (): Promise<Candidate[]> => {
 
     // Filter out any null results
     const validUsers = detailedUsers.filter((user) => user !== null) as DetailedApiResponse[];
-    console.log('Detailed User Data:', validUsers);
+    //console.log('Detailed User Data:', validUsers);
 
     const candidates = mapApiDataToCandidate(validUsers);
-    console.log('Mapped Candidates:', candidates);
+    //console.log('Mapped Candidates:', candidates);
 
     return candidates;
   } catch (err) {
