@@ -2,6 +2,10 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+![The image shows how can the user choose any candite.](./Assets/candidateSearch.png)
+
+![The image shows the list of candidates the user had choose.](./Assets/candidateList.png)
+
 ## Description:
 
 This project show some profiles from github as a potencial candidates, The users would have the option to choose the candidate and save it or just eliminate and keep looking for more Candidates
